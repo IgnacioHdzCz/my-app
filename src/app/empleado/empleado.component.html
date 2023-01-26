@@ -1,0 +1,32 @@
+<p >Ingresa datos!</p>
+
+<p>Nombre del empleado : {{nombre.value}}</p>
+<p>Apellido del empleado : {{apellido.value}}</p>
+<p>Edad del empleado : {{ edad.value}}</p>
+<p>Empresa del empleado : {{empresa.value}}</p>
+
+<!--
+Introduce la empresa : <input type="text" #empresa >
+-->
+Introduce tú Nombre : <input type="text" #nombre (keyup)="0" [disabled]="habilitacionCuadro">
+<br>
+<br>
+Introduce tú Apellido : <input type="text" #apellido (keyup)="0" [disabled]="habilitacionCuadro">
+<br>
+<br>
+Introduce tú Edad : <input type="text" #edad (keyup)="0" [disabled]="habilitacionCuadro">
+<br>
+<br>
+Introduce la empresa : <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
+<br>
+<br>
+
+<!--
+<input type="button" value="texto" (click)="llamaEmpresa(empresa.value)" />  
+-->
+
+{{textoDeRegistro}}
+<br>
+Registrado : <input type="radio" value="si" name="Registro" id="registro" [checked]="usuarioRegistrado" (click)="setUsuarioRegistrado($event)"/><br>
+No Registrado: <input type="radio" value="no" name="Registro" (click)="setUsuarioRegistrado($event)" >
+{{getRegistroUsuario()}}
